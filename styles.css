@@ -1,0 +1,195 @@
+a {
+        color: orange;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .compare-section {
+        border: 1px solid #181818;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    /* New bike card style with diagonal white bottom */
+    .bike-card {
+        position: relative;
+        background-color: #e9eaec;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 213px;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
+    }
+    .bike-card-upload {
+        position: relative;
+        background-color: #e9eaec;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 213px;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
+    }
+    .bike-card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .bike-card-upload img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    /* White diagonal shape on left */
+    .bike-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height:95%;
+        background-color: white;
+        clip-path: polygon(
+            85% 100%,   /* Mid slope */
+            6% 50%,   /* Bend point */
+            0% 35%,    /* Mid left */
+            0% 100%,   /* Bottom left */
+            100% 100%  /* Back to bottom right */
+        );
+        z-index: 2;
+    }
+    .bike-card-upload::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 95%;
+        background-color: #27282c;
+        clip-path: polygon(
+            85% 100%,   /* Mid slope */
+            6% 50%,   /* Bend point */
+            0% 35%,    /* Mid left */
+            0% 100%,   /* Bottom left */
+            100% 100%  /* Back to bottom right */
+        );
+        z-index: 2;
+    }
+
+    /* Image box above white shape */
+    .image-box {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+        z-index: 2;
+    }
+    .image-box img {
+        width: 60px;
+        height: 60px;
+    }
+    .text-content,.text-content-upload {
+        line-height: 20px;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 3;
+    }
+    .text-content p {
+        margin: 0;   
+    }
+    .text-content small {
+        margin: 0;
+        font-size: 13px;
+        color: #555;
+    }
+    .text-content-upload p {
+        margin: 0;
+        color: #ffffff;
+    }
+    .text-content-upload small {
+        margin: 0;
+        font-size: 13px;
+        color: #ffffff;
+    }
+    .add-card {
+        border: 2px dashed #ccc;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 75px;
+        color: #999;
+        height: 213px;
+        padding-bottom: 15px;
+    }
+    .compare-btn {
+        background: white;
+        color: black;
+        padding: 10px 110px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 18px;
+        border: 3px solid transparent;
+        background-image: linear-gradient(white, white),
+                          linear-gradient(to right, orange, black);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        cursor: pointer;
+        transition: 0.4s ease;
+    }
+    .compare-btn:hover {
+        background: #ffac03;
+        color: #fff;
+        transition: all 0.4s ease;
+    }
+    @media (max-width: 576px) {
+        .bike-card::after,
+        .bike-card-upload::after{
+        clip-path: polygon(
+            85% 100%,   /* Mid slope */
+            10% 45%,   /* Bend point */
+            0% 25%,    /* Mid left */
+            0% 100%,   /* Bottom left */
+            100% 100%  /* Back to bottom right */
+        );
+        z-index: 2;
+    }
+        .text-content-upload,
+        .text-content {
+            left: 10px;
+            bottom: 10px;
+            line-height: 16px;
+        }
+        .text-content-upload p,
+        .text-content p {
+            font-size: 14px;
+        }
+        .text-content-upload small,
+        .text-content small {
+            font-size: 13px;
+        }
+        .bike-card-upload,
+        .bike-card,
+        .add-card {
+            height: 190px;
+        }
+    }
+    @media (min-width: 577px) and (max-width: 1000px) {
+        .text-content-upload,
+        .text-content {
+            left: 12px;
+            bottom: 12px;
+            line-height: 18px;
+        }
+        .text-content-upload p,
+        .text-content p {
+            font-size: 16px;
+        }
+        .text-content-upload small,
+        .text-content small {
+            font-size: 14px;
+        }
+    }
