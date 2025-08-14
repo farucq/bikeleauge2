@@ -145,43 +145,11 @@ a {
         color: #fff;
         transition: all 0.4s ease;
     }
-    @media (max-width: 576px) {
-        .bike-card::after,
-        .bike-card-upload::after{
-        clip-path: polygon(
-            85% 100%,   /* Mid slope */
-            10% 45%,   /* Bend point */
-            0% 25%,    /* Mid left */
-            0% 100%,   /* Bottom left */
-            100% 100%  /* Back to bottom right */
-        );
-        z-index: 2;
-    }
+    @media (min-width: 400px) and (max-width: 1000px) {
         .text-content-upload,
         .text-content {
-            left: 10px;
-            bottom: 10px;
-            line-height: 16px;
-        }
-        .text-content-upload p,
-        .text-content p {
-            font-size: 14px;
-        }
-        .text-content-upload small,
-        .text-content small {
-            font-size: 13px;
-        }
-        .bike-card-upload,
-        .bike-card,
-        .add-card {
-            height: 190px;
-        }
-    }
-    @media (min-width: 577px) and (max-width: 1000px) {
-        .text-content-upload,
-        .text-content {
-            left: 12px;
-            bottom: 12px;
+            left: 15px;
+            bottom: 15px;
             line-height: 18px;
         }
         .text-content-upload p,
