@@ -304,10 +304,16 @@ a {
         }
     
     }
-@media (max-width: 768px) {
-    .comparison-table table {
-    font-size: 15px; /* smaller text for small screens */
+@media (max-width: 590px) {
+  .comparison-table table {
+    font-size: 13px; /* smaller text for small screens */
   }
+  .compare-section2 {
+        padding: 20px;
+    }
+}
+/* Force table scroll on small screens */
+@media (max-width: 768px) {
   .comparison-table {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
@@ -317,6 +323,7 @@ a {
     min-width: 600px; /* ensures scroll instead of shrinking too much */
   }
 }
+
 
 
 
