@@ -1,0 +1,484 @@
+a {
+        color: orange;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .compare-section, .compare-section2 {
+        border: 1px solid #181818;
+        border-radius: 10px;
+        padding: 40px;
+    }
+
+    /* New bike card style with diagonal white bottom */
+    .bike-card {
+        position: relative;
+        background-color: #e9eaec;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 225px;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
+    }
+    .bike-card-upload {
+        position: relative;
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 225px;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
+    }
+    .bike-card img {
+         width: 230px;   /* adjust to desired size */
+        height: auto;   /* maintain aspect ratio */
+        display: block;
+        margin: 0px auto 0 auto; 
+        
+    }
+    .bike-card-upload img {
+       width: 230px;   /* adjust to desired size */
+        height: auto;   /* maintain aspect ratio */
+        display: block;
+        margin: 0px auto 0 auto; 
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #555;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .close-btn:hover {
+        color: red;
+    }
+    .price {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #27282c;  /* white text for dark background */
+        z-index: 3;
+    }
+    /* White diagonal shape on left */
+    .bike-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height:95%;
+        background-color: white;
+        clip-path: polygon(
+            85% 100%,   /* Mid slope */
+            6% 45%,   /* Bend point */
+            0% 25%,    /* Mid left */
+            0% 100%,   /* Bottom left */
+            100% 100%  /* Back to bottom right */
+        );
+        z-index: 2;
+    }
+    .bike-card-upload::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 95%;
+        background-color: #3d3d3d ;
+        clip-path: polygon(
+            85% 100%,   /* Mid slope */
+            6% 45%,   /* Bend point */
+            0% 25%,    /* Mid left */
+            0% 100%,   /* Bottom left */
+            100% 100%  /* Back to bottom right */
+        );
+        z-index: 2;
+    }
+
+    /* Image box above white shape */
+    .image-box {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+        z-index: 2;
+    }
+    .image-box img {
+        width: 60px;
+        height: 60px;
+    }
+    .text-content,.text-content-upload {
+        line-height: 20px;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 3;
+    }
+    .text-content p {
+        margin: 0;   
+    }
+    .text-content small {
+        margin: 0;
+        font-size: 13px;
+        color: #555;
+    }
+    .text-content-upload p {
+        margin: 0;
+        color: #ffffff;
+    }
+    .text-content-upload small {
+        margin: 0;
+        font-size: 13px;
+        color: #ffffff;
+    }
+    .add-card {
+        border: 2px dashed #ccc;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 75px;
+        color: #999;
+        height: 225px;
+        padding-bottom: 15px;
+    }
+      /* Toggle switch container */
+      .toggle,.reset-btn{
+        margin-top: 20px;
+      }
+    .toggle-switch {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 14px;
+        gap: 20px;
+    }
+
+    /* Hide default checkbox */
+    .toggle-switch input {
+        display: none;
+    }
+
+    /* Slider background */
+    .slider {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        background: #ccc;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    /* Circle inside slider */
+    .slider::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        width: 16px;
+        height: 16px;
+        background: white;
+        border-radius: 50%;
+        transition: 0.3s;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    /* When checked */
+    .toggle-switch input:checked + .slider {
+        background: orange;
+    }
+    .toggle-switch input:checked + .slider::before {
+          transform: translateX(18px);
+    }
+
+    /* Label text */
+    .label-text {
+        font-size: 17px;
+        color: #333;
+    }
+
+    /* Reset button */
+    .reset-btn {
+        background: #ffac03;
+        color: white;
+        border: none;
+        padding: 10px 70px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 18px;
+        cursor: pointer;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.15);
+        transition: 0.3s;
+    }
+    .reset-btn:hover {
+        transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, .15);
+    }
+    .compare-sectionMobile {
+        display: none;
+    }
+
+
+    .comparison-table {
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .comparison-table table {
+      border-collapse: separate !important;
+      border-spacing: 8px; /* spacing between boxes */
+      width: 100%;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      border: 1px solid #000; /* thin black border */
+      border-radius: 10px;   /* rounded boxes */
+      padding: 12px;
+      background: #f8f9fa;   /* light background for cells */
+    }
+
+    thead th {
+      background: #3d3d3d !important;
+      color: #fff !important;
+      text-align: center;
+    }
+
+    tbody th {
+      background: #e6e6e6 !important;
+      text-align: left;
+      font-weight: normal;
+    }
+
+
+    @media (max-width: 790px){
+        .label-text{
+            font-size: 17px;
+        }
+        .price {
+            font-size: 15px;
+            bottom: 35px;     
+        }
+        .bike-card-upload img {
+            width: 220px;   /* adjust to desired size */ 
+        }
+    }
+    @media (min-width: 1000px) and (max-width: 1200px) {
+        .price {
+            font-size: 15px;
+            bottom: 40px;
+            right: 15px;
+        }
+    }
+     @media (min-width: 1201px) and (max-width: 1350px) {
+        .price {
+            font-size: 17px;
+            bottom: 40px;
+            
+        }
+    }
+
+    @media (min-width: 400px) and (max-width: 1000px) {
+        .text-content-upload,
+        .text-content {
+            left: 15px;
+            bottom: 15px;
+            line-height: 18px;
+        }
+        .text-content-upload p,
+        .text-content p {
+            font-size: 16px;
+        }
+        .text-content-upload small,
+        .text-content small {
+            font-size: 14px;
+        }
+    
+    }
+@media (max-width: 590px) {
+  .comparison-table table {
+    font-size: 13px; /* smaller text for small screens */
+  }
+  .compare-section2 {
+        padding: 20px;
+    }
+}
+/* Force table scroll on small screens */
+@media (max-width: 574px) {
+  .comparison-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+  }
+  .noneMobile{
+    display: none;
+  }
+  .compare-section{
+    border: none;
+    padding: 0;
+  }
+  .comparison-table table {
+    min-width: 600px; /* ensures scroll instead of shrinking too much */
+  }
+  .bike-card-upload,.bike-card {
+        height: 165px;
+    }
+    .bike-card img {
+        margin-top: 10px;
+        width: 118px;   /* adjust to desired size */ 
+    }
+    .bike-card-upload img {
+        margin-top: 18px;
+        width: 110px;   /* adjust to desired size */ 
+    }
+    .bike-card::after {
+        clip-path: polygon(
+            100% 85%,   /* Mid slope */
+            6% 44%,   /* Bend point */
+            0% 25%,    /* Mid left */
+            0% 100%,   /* Bottom left */
+            100% 100%  /* Back to bottom right */
+        );
+    }
+    .bike-card-upload::after {
+        clip-path: polygon(
+            100% 85%,   /* Mid slope */
+            6% 44%,   /* Bend point */
+            0% 25%,    /* Mid left */
+            0% 100%,   /* Bottom left */
+            100% 100%  /* Back to bottom right */
+        );
+    }
+    .close-btn {
+        top: 0px;
+        right: 10px;
+        font-size: 20px;
+    }
+    .text-content{
+            left: 10px;
+            bottom: 17px;
+            line-height: 11px;
+    }
+    .text-content-upload {
+            left: 8px;
+            bottom: 24px;
+            line-height: 11px;
+        }
+        .text-content-upload p,
+        .text-content p {
+            font-size: 10px;
+        }
+        .text-content-upload small,
+        .text-content small {
+            font-size: 9px;
+        }
+        .price {
+            color: white;
+            font-size: 10px;
+            bottom: 6px;
+            left: 9px;
+        }
+        .mobileView{
+            display: block !important;
+        }
+        .label-text {
+        font-size: 13px;
+        padding-left: 5px;
+    }
+     .slider {
+        width: 32px;
+        height: 15px;
+    }
+    .slider::before {
+        top: 2px;
+        left: 2px;
+        width: 10px;
+        height: 10px;    
+    }
+    .toggle-switch {
+        
+        gap: 7px;
+        margin-bottom: 16px;
+        
+    }
+    .reset-btn {
+        padding: 7px 56px;
+        font-size: 14px;
+    }
+    
+  /* comparison Table Mobile View */
+    .compare-section2 {
+        display: none !important;
+        }
+    .compare-sectionMobile {
+        display: block;
+        font-family: Arial, sans-serif;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .compare-row {
+        margin-bottom: 10px;
+    }
+    
+    .compare-heading {
+      background: #c9c9c9;
+      padding: 8px 12px;
+      font-weight: bold;
+      border-radius: 4px 4px 0 0;
+    }
+    .compare-values {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 0;
+    }
+    
+    .compare-item {
+      flex: 1;
+      text-align: center;
+      border: 1px solid #bfbfbf;
+      border-radius: 8px;
+      padding: 8px 5px;
+      background: #fff;
+      font-size: 14px;
+    }
+    
+
+}
+
+    .circle-btn {
+            padding-bottom: 7px;
+        margin-top: 21px;
+        margin-right: 10px;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: #999; /* gray background */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .circle-btn:hover {
+        background-color: #555; /* dark gray on hover */
+    }
+    @media (max-width: 366px) {
+
+        .bike-card img{
+            margin-left: -5px;
+        }
+    }
+    
+  
