@@ -18,7 +18,10 @@
 
     <div class="row  g-2 g-md-4">
         <div class="col-sm-6 noneMobile col-lg-3 col-12">
-            <div class="add-card">+</div>
+            <div class="add-card">
+              <img src="images/comparisonIcon2.png" width="180px"/>
+            </div>
+            
         </div>
         <div class="col-sm-6 col-lg-3 col-4">
             <div class="bike-card-upload">
@@ -50,15 +53,16 @@
             </div>
         </div>
         
-        <div class="col-12 d-flex justify-content-end mt-0 d-block d-sm-none">
-    <button class="circle-btn">+</button>
-    <button class="reset-btn">Reset</button>
-  </div>
+    <div class="col-12 d-flex justify-content-end mt-0 d-block d-sm-none gap-2">
+    <button class="reset-btn submit">Submit</button>
+    <button class="reset-btn reset">Reset</button>
+    
+    </div>
 
   <!-- Toggle & Reset Section (wrapped in a col-12) -->
   <div class="col-12">
-    <div class="row d-flex align-items-center justify-content-between">
-      <div class="col-12 col-sm-8 col-md-10 d-flex flex-wrap align-items-center gap-0 gap-lg-2 toggle">
+    <div class="row d-flex ">
+      <div class="col-12 col-sm-8 col-md-9 d-flex flex-wrap align-items-center gap-0 gap-lg-2 toggle ">
         <!-- Toggles -->
         <label class="col-sm-12 col-md-6 mb-sm-1 mb-md-3 mb-lg-0 col-lg-3 col-7 toggle-switch">
           <input type="checkbox">
@@ -86,8 +90,10 @@
       </div>
 
       <!-- Right side Reset Button -->
-      <div class="col-12 col-sm-4 col-md-2 d-flex justify-content-end mt-3 mt-lg-0 noneMobile">
-        <button class="reset-btn mb-md-3 mb-lg-0 noneMobile">Reset</button>
+      <div class="col-sm-4 col-md-3 d-flex justify-content-end mt-0 mt-lg-0 align-items-start noneMobile gap-3">
+        <button class="reset-btn submit mb-md-3 mb-lg-0 noneMobile">Submit</button>
+        <button class="reset-btn reset mb-md-3 mb-lg-0 noneMobile">Reset</button>
+        
       </div>
     </div>
   </div>
