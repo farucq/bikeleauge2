@@ -253,6 +253,14 @@ a {
       background: #f8f9fa;   /* light background for cells */
     }
 
+    .tableHeading th,
+    .tableHeading td {
+        background-color: #3d3d3d !important;
+        color: #fff !important;
+        border:none;
+        font-weight: 500;
+    }
+
     thead th {
       background: #3d3d3d !important;
       color: #fff !important;
@@ -322,9 +330,6 @@ a {
   .comparison-table table {
     font-size: 13px; /* smaller text for small screens */
   }
-  .compare-section2 {
-        padding: 20px;
-    }
 }
 /* Force table scroll on small screens */
 @media (max-width: 574px) {
@@ -339,9 +344,7 @@ a {
     border: none;
     padding: 0;
   }
-  .comparison-table table {
-    min-width: 600px; /* ensures scroll instead of shrinking too much */
-  }
+
   .bike-card-upload,.bike-card {
         height: 165px;
     }
@@ -430,50 +433,93 @@ a {
     
   /* comparison Table Mobile View */
     .compare-section2 {
-        display: none !important;
+        border: none;
+        padding:0px;
         }
-    .compare-sectionMobile {
-        display: block;
-        font-family: Arial, sans-serif;
-        max-width: 700px;
-        margin: 0 auto;
+    /* hide the original table header */
+  .comparison-table thead {
+    display: none;
+  }
+  .tableHeading td{
+    color: #000;
+  }
+    .tableHeading td {
+        background-color: #fff !important;
+        color: #040404 !important;
+        font-weight: 400;
+    }
+  .comparison-table table {
+      border-spacing: 0px; /* spacing between boxes */
+      
     }
 
-    .compare-row {
-        margin-bottom: 10px;
+    .comparison-table th,
+    .comparison-table td {
+      border: none;
     }
-    
-    .compare-heading {
-      background: #c9c9c9;
-      padding: 8px 12px;
-      font-weight: bold;
-      border-radius: 4px 4px 0 0;
+
+  /* Convert each row to a "card" using grid */
+  .comparison-table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 value columns */
+    gap: 10px;
+    margin-bottom: 14px;
+    padding: 0px;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+    align-items: stretch;
+  }
+
+  /* Make the row header occupy the full width above the three columns */
+  .comparison-table tbody tr > th {
+    grid-column: 1 / -1;           /* full-width */
+    background: #c9c9c9 !important;
+    color: #000 !important;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-bottom: 6px;           /* spacing between heading and values */
+    text-align: left;
+  }
+
+  /* Style each value box */
+  .comparison-table tbody tr > td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    text-align: center;
+    font-size: 13px;
+  }
+  /* reduce spacing in very small screens */
+  @media (max-width: 360px) {
+    .comparison-table tbody tr {
+      gap: 6px;
+      padding: 0px;
     }
-    .compare-values {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 10px 0;
+    .comparison-table tbody tr > td {
+      padding: 8px;
+      font-size: 12px;
+      min-height: 40px;
     }
-    
-    .compare-item {
-      flex: 1;
-      text-align: center;
-      border: 1px solid #bfbfbf;
-      border-radius: 8px;
-      padding: 8px 5px;
-      background: #fff;
-      font-size: 14px;
+    .comparison-table tbody tr > th {
+      padding: 8px 15px;
+      font-size: 13px;
     }
-    
+  }
 
 }
 
-    @media (max-width: 366px) {
+@media (max-width: 366px) {
 
         .bike-card img{
             margin-left: -5px;
         }
     }
     
-  
+
