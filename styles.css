@@ -282,19 +282,8 @@ a {
     }
     }
 
-    @media (max-width: 790px){
-        .label-text{
-            font-size: 17px;
-        }
-        .price {
-            font-size: 15px;
-            bottom: 35px;     
-        }
-        .bike-card-upload img {
-            width: 220px;   /* adjust to desired size */ 
-        }
-    }
-    @media (min-width: 1000px) and (max-width: 1200px) {
+
+    @media (min-width: 574px) and (max-width: 1200px) {
         .price {
             font-size: 15px;
             bottom: 40px;
@@ -521,5 +510,127 @@ a {
             margin-left: -5px;
         }
     }
+   
     
 
+@media (min-width: 574px) and (max-width: 850px) {
+
+  .noneMobile{
+    display: none;
+  }
+
+  .bike-card-upload,.bike-card {
+        height: 165px;
+    }
+    .bike-card img {
+        margin-top: 10px;
+        width: 155px;   /* adjust to desired size */ 
+    }
+    .bike-card-upload img {
+        margin-top: 18px;
+        width: 145px;   /* adjust to desired size */ 
+    }
+
+    .close-btn {
+        top: 0px;
+        right: 10px;
+        font-size: 20px;
+    }
+    .text-content{
+            left: 10px;
+            bottom: 17px;
+            line-height: 11px;
+    }
+    .text-content-upload {
+            left: 8px;
+            bottom: 15px;
+            line-height: 11px;
+        }
+        .text-content-upload p,
+        .text-content p {
+            font-size: 12px;
+        }
+        .text-content-upload small,
+        .text-content small {
+            font-size: 10px;
+        }
+        .price {
+            color: #27282c;
+            font-size: 11px;
+            bottom: 30px;
+        }
+        .mobileView{
+            display: block !important;
+        }
+        .label-text {
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    .toggle-switch {
+        
+        gap: 7px;
+        margin-bottom: 16px;
+        
+    }
+    .reset-btn {
+        padding: 7px 38px;
+        font-size: 14px;
+    }
+    
+}    
+
+
+@media (min-width: 850px) and (max-width:1201px) {
+  .comparison-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+  }
+  .noneMobile{
+    display: none;
+  }
+    .close-btn {
+        top: 0px;
+        right: 10px;
+        font-size: 28px;
+    }
+        .mobileView{
+            display: block !important;
+        }
+        .label-text {
+        font-size: 15px;
+        padding-left: 0px;
+    }
+     .slider {
+        width: 32px;
+        height: 17px;
+    }
+    .slider::before {
+        top: 2px;
+        left: 2px;
+        width: 10px;
+        height: 11px;    
+    }
+    .toggle-switch {
+        
+        gap: 7px;
+        margin-bottom: 16px;
+        
+    }
+    .reset-btn {
+        padding: 8px 38px;
+        font-size: 15px;
+    }
+    
+    
+}
+
+@media (min-width: 590px) and (max-width:910px) {
+    .tableHeading th,
+    .tableHeading td {
+        font-size: 14px;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      font-size: 14px;
+    }
+}
